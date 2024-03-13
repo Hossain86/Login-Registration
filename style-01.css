@@ -1,0 +1,112 @@
+body{
+  margin: 0;
+  background-color: rgb(219, 228, 243);
+  background-image: url(back-3.jpg);
+  background-size: cover;
+  
+  height: 75vh;
+}
+.sub-button{
+  height: 50px;
+  width: 400px;
+  font-size: 24px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  background-color: rgb(36, 72, 72);
+  color: white;
+  border: 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.landing-section{
+  margin: 10% 32%;
+  padding: 40px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(230, 230, 231, 0.4);
+  border-radius: 10px;
+}
+.login-all-section,.registration-all-section{
+  margin: 4% 32%;
+  padding: 30px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(252, 219, 199, 0.5);
+  border-radius: 10px;
+}
+.login-all-section p,.registration-all-section p{
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 600;
+}
+.login-all-section input,.registration-all-section input{
+  height: 34px;
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid;
+}
+@media screen and (max-width: 1100px){
+  body{
+    margin: 0;
+    height: 90vh;
+  }
+  .sub-button{
+    height: 50px;
+    width: 340px;
+    font-size: 24px;
+  }
+  .landing-section{
+    margin: 10% 22%;
+    padding: 20px;
+  }
+  .login-all-section,.registration-all-section{
+    margin: 4% 22%;
+    padding-top: 30px;
+    padding-right: 60px;
+  }
+  .login-all-section p,.registration-all-section p{
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 600;
+  }
+  .login-all-section input,.registration-all-section input{
+    height: 34px;
+    width: 340px;
+    border-radius: 5px;
+    border: 1px solid;
+  }
+}
+@media screen and (max-width: 700px){
+  body{
+    margin: 0;
+    height: 90vh;
+  }
+  .sub-button{
+    height: 50px;
+    width: 200px;
+    font-size: 24px;
+  }
+  .landing-section{
+    margin: 10% 10%;
+    padding: 20px;
+  }
+  .login-all-section,.registration-all-section{
+    margin: 4% 10%;
+    padding-top: 30px;
+    padding-right: 60px;
+  }
+  .login-all-section p,.registration-all-section p{
+    font-size: 16px;
+    font-family: Roboto;
+    font-weight: 600;
+  }
+  .login-all-section input,.registration-all-section input{
+    height: 34px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid;
+  }
+}
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login And Registration</title>
+  <link rel="stylesheet" href="style-01.css">
+  <link rel="icon" type="image/x-icon" href="icon.svg">
+</head>
+<body><div class="landing-section">
+  <button class="login-class sub-button" onclick="login()">Login</button><br>
+  <button class="registration-class sub-button" onclick="registration()">Registration</button>
+  
+</div>
+  <script>
+    let login_html = `
+    <div class="login-all-section">
+      <p>Email:</p>
+      <input type="email" id="email" placeholder="Enter your email">
+      <p>Password:</p>
+      <input type="password" id="password" placeholder="Enter Password"><br><br>
+      <button class="sub-button" onclick="submitLogin()">Submit</button>
+    </div>
+    `;
+
+    let registration_html = `
+    <div class="registration-all-section">
+      <p>Email:</p>
+      <input type="email" id="email" placeholder="Enter your email">
+      <p>Name:</p>
+      <input type="text" id="name" placeholder="Enter your name">
+      <p>Password:</p>
+      <input type="password" id="password" placeholder="Enter Password">
+      <p>Confirm Password:</p>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password"><br><br>
+      <button class="sub-button" onclick="submitRegistration()">Submit</button>
+    </div>
+    `;
+
+    function registration() {
+      document.body.innerHTML = registration_html;
+    }
+
+    function login() {
+      document.body.innerHTML = login_html;
+    }
+
+    function submitLogin() {
+      let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+      document.body.innerHTML=`<div class="landing-section">
+  <button class="login-class sub-button" onclick="login()">Login</button><br>
+  <button class="registration-class sub-button" onclick="registration()">Registration</button>
+  
+</div>`;
+      // Here you can perform login logic (e.g., send request to server)
+      console.log("Login:", email, password);
+    }
+
+    function submitRegistration() {
+      let email = document.getElementById('email').value;
+      let name = document.getElementById('name').value;
+      let password = document.getElementById('password').value;
+      let confirmPassword = document.getElementById('confirmPassword').value;
+
+      document.body.innerHTML=`<div class="landing-section">
+  <button class="login-class sub-button" onclick="login()">Login</button><br>
+  <button class="registration-class sub-button" onclick="registration()">Registration</button>
+  
+</div>`;
+      // Perform validation here
+      if (password !== confirmPassword) {
+        alert("Passwords do not match");
+        return;
+      }
+
+      // Here you can perform registration logic (e.g., send request to server)
+      console.log("Registration:", email, name, password);
+    }
+  </script>
+</body>
+</html>
